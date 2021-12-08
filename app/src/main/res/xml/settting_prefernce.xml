@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBoxPreference
+        android:title="알림설정"
+        android:summary="알림설정여부"
+        android:defaultValue="true"
+        android:key="ALRAM" />
+    <SwitchPreference
+        android:key="vibration"
+        android:title="진동알림"
+        android:summaryOn="진동알림 ON"
+        app:summaryOff="진동알림 OFF"
+        android:defaultValue="true"
+        android:dependency="ALRAM"/>
+    <SwitchPreference
+        android:key="popup"
+        android:title="팝업알림"
+        android:summaryOn="팝업알림 ON"
+        android:summaryOff="팝업알림 OFF"
+        android:defaultValue="true"
+        android:dependency="ALRAM"/>
+    <ListPreference
+        android:key="period"
+        android:title="알람주기"
+        android:defaultValue="false"
+        android:summary="알람을 언제 받고 싶은지 체크하세요."
+        android:entries="@array/period"
+        app:entryValues="@array/period"
+        android:dependency="ALRAM"/>
+<!-- android:summary="팝업 알림을 받으려면 체크하세요."
+-->
+
+
+</PreferenceScreen>

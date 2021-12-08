@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scanner">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/zxing_barcode_scanner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp">
+            <TextView
+                android:id="@+id/barcodetext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"/>
+
+        </LinearLayout>
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#578e5d">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#578e5d"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <!--<TextView
+        android:id="@+id/zxing_status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/zxing_transparent"
+        android:text="@string/zxing_msg_default_status"
+        android:textColor="@color/zxing_status_text" />-->
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품명 :"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/result_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/label_name"
+        android:layout_alignBaseline="@id/label_name"/>
+    <TextView
+        android:id="@+id/label_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품종류 : "
+        android:textStyle="bold"
+        android:layout_below="@id/label_name"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/result_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/label_type"
+        android:layout_alignBaseline="@id/label_type"/>
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="유통기한 : "
+        android:textStyle="bold"
+        android:layout_below="@id/label_type"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/result_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/label_date"
+        android:layout_alignBaseline="@id/label_date"/>
+    <TextView
+        android:id="@+id/label_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="바코드 : "
+        android:textStyle="bold"
+        android:layout_below="@id/label_date"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/result_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/label_code"
+        android:layout_alignBaseline="@id/label_code"/>
+
+    <!--<Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:text="알림test버튼" />-->
+
+
+</RelativeLayout>

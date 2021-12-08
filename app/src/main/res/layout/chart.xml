@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <org.eazegraph.lib.charts.PieChart
+        android:id="@+id/tab1_chart_1"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        app:egBarWidth="20dp"
+        app:egEnableScroll="true"
+        app:egFixedBarWidth="true"
+        app:egLegendHeight="40dp"
+        app:egShowDecimal="true" />
+    <TextView
+        android:id="@+id/title_summary"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="What's your ranking?"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/ranking1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="1위 :"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/ranking1_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ranking1"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@id/ranking1"/>
+    <TextView
+        android:id="@+id/ranking2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="2위 : "
+        android:textStyle="bold"
+        android:layout_below="@id/ranking1"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/ranking2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ranking2"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@id/ranking2"/>
+    <TextView
+        android:id="@+id/ranking3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="3위 : "
+        android:textStyle="bold"
+        android:layout_below="@id/ranking2"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/ranking3_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ranking3"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@id/ranking3"/>
+</RelativeLayout>
+
+</LinearLayout>

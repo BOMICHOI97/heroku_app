@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="period">
+        <item>마감1일전</item>
+        <item>마감3일전</item>
+        <item>마감7일전</item>
+
+    </string-array>
+    <string-array name="foodtype">
+        <item>상품의 종류를 선택하시오</item>
+        <item>스낵류</item>
+        <item>음료</item>
+        <item>가공식품</item>
+        <item>건강식품</item>
+        <item>유제품</item>
+        <item>장류/양념류</item>
+        <item>냉동식품</item>
+    </string-array>
+
+</resources>

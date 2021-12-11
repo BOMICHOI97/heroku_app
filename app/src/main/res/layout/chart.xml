@@ -13,24 +13,32 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="5dp"
         android:padding="10dp"
+        android:fontFamily="@font/notokrmedium"
         app:egBarWidth="20dp"
         app:egEnableScroll="true"
         app:egFixedBarWidth="true"
         app:egLegendHeight="40dp"
         app:egShowDecimal="true" />
+
     <TextView
         android:id="@+id/title_summary"
-        android:layout_marginTop="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_gravity="center"
-        android:text="What's your ranking?"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/notokrbold"
+        android:text="나의 소비 유형은?"
         android:textAlignment="center"
-        />
+        android:textColor="#4C4C4C"
+        android:background="#B2CCFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -39,8 +47,11 @@
         android:id="@+id/ranking1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="1위 :"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="20dp"
+        android:text="1위 "
+        android:textSize="15dp"
+        android:fontFamily="@font/notokrbold"
         android:textStyle="bold"
         android:layout_marginTop="16dp"/>
     <TextView
@@ -48,14 +59,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/ranking1"
-        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/notokrregular"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
         android:layout_alignBaseline="@id/ranking1"/>
     <TextView
         android:id="@+id/ranking2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="2위 : "
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="20dp"
+        android:text="2위 "
+        android:textSize="15dp"
+        android:fontFamily="@font/notokrbold"
         android:textStyle="bold"
         android:layout_below="@id/ranking1"
         android:layout_marginTop="16dp"/>
@@ -65,14 +82,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/ranking2"
-        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/notokrregular"
+        android:layout_marginLeft="30dp"
         android:layout_alignBaseline="@id/ranking2"/>
     <TextView
         android:id="@+id/ranking3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="3위 : "
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="20dp"
+        android:text="3위  "
+        android:textSize="15dp"
+        android:fontFamily="@font/notokrbold"
         android:textStyle="bold"
         android:layout_below="@id/ranking2"
         android:layout_marginTop="16dp"/>
@@ -81,7 +104,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/ranking3"
-        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/notokrregular"
+        android:textSize="15dp"
+        android:layout_marginLeft="30dp"
         android:layout_alignBaseline="@id/ranking3"/>
 </RelativeLayout>
 

@@ -6,16 +6,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-
-            android:title="@string/menu_home" />
+            android:fontFamily="@font/notokrmedium"
+            android:title="홈" />
         <item
             android:id="@+id/nav_setting"
-
-            android:title="@string/menu_setting" />
+            android:fontFamily="@font/notokrmedium"
+            android:title="설정" />
         <item
             android:id="@+id/nav_category"
-
-            android:title="Category"/>
+            android:fontFamily="@font/notokrmedium"
+            android:title="소비패턴"/>
     </group>
 </menu>
 

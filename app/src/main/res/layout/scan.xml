@@ -19,7 +19,7 @@
                 android:id="@+id/barcodetext"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorAccent"/>
+                android:background="#EBF7FF"/>
 
         </LinearLayout>
     </com.journeyapps.barcodescanner.DecoratedBarcodeView>
@@ -27,7 +27,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#578e5d">
+        android:background="#EBF7FF">
 
     </LinearLayout>
 
@@ -35,18 +35,20 @@
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="#578e5d"
+        android:background="#EBF7FF"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <!--<TextView
-        android:id="@+id/zxing_status_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/zxing_transparent"
-        android:text="@string/zxing_msg_default_status"
-        android:textColor="@color/zxing_status_text" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/notokrmedium"
+            android:text="바코드를 촬영해보세요"
+            android:textColor="#4C4C4C"
+            android:textSize="15dp" />
 
     </LinearLayout>
 

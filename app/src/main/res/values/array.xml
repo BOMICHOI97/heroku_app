@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="period">
-        <item>마감1일전</item>
-        <item>마감3일전</item>
-        <item>마감7일전</item>
+        <item>오후 4시</item>
+        <item>오후 8시</item>
+        <item>오전 12시</item>
 
     </string-array>
     <string-array name="foodtype">

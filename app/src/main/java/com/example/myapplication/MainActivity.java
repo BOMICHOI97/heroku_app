@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             Integer Date = calendar.get(Calendar.DATE);
 
 
-                            calendar.set(Year, Month, Date, 00, 45, 0);
+                            calendar.set(Year, Month, Date, 20, 45, 0);
                             //알람 예약
                             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender);
 

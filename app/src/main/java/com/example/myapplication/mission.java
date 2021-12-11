@@ -85,33 +85,33 @@ public class mission extends AppCompatActivity implements View.OnClickListener {
         Log.v("MISSION시작:",Integer.toString(barCdVoArrayList.size()));
 
 
-        imageView = (ImageView) findViewById(R.id.imageView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu pop = new PopupMenu(getApplicationContext(), view);
-                getMenuInflater().inflate(R.menu.main_menu, pop.getMenu());
-                pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem menuItem) {
-                        switch (menuItem.getItemId()) {
-                            case R.id.one:
-                                captureCamera();
-                                break;
-                            case R.id.two:
-                                getAlbum();
-                                break;
-
-                        }
-                        return true;
-                    }
-
-                });
-                pop.show();
-                checkPermission();
-            }
-
-        });
+//        imageView = (ImageView) findViewById(R.id.imageView);
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                PopupMenu pop = new PopupMenu(getApplicationContext(), view);
+//                getMenuInflater().inflate(R.menu.main_menu, pop.getMenu());
+//                pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+//                    @Override
+//                    public boolean onMenuItemClick(MenuItem menuItem) {
+//                        switch (menuItem.getItemId()) {
+//                            case R.id.one:
+//                                captureCamera();
+//                                break;
+//                            case R.id.two:
+//                                getAlbum();
+//                                break;
+//
+//                        }
+//                        return true;
+//                    }
+//
+//                });
+//                pop.show();
+//                checkPermission();
+//            }
+//
+//        });
 
 
 
@@ -272,31 +272,32 @@ public class mission extends AppCompatActivity implements View.OnClickListener {
 
     private void settingAuto(String autoCode){
         int end = barCdVoArrayList.size();
-        Log.v("바코드num", Integer.toString((end)));
+        //Log.v("바코드num", Integer.toString((end)));
         String RBarCode = autoCode.substring(0,9);
-        Log.v("바코드",RBarCode);
-
-
-        String sqlSelect ="SELECT substr(Bar_CD,0,10),Product_NM,Product_DCNM,Product_DAYCNT FROM API WHERE substr(Bar_CD,0,10) = ?";
+        //Log.v("바코드",RBarCode);
+        String sqlSelect ="SELECT substr(Bar_CD,0,10)," +
+                "Product_NM,Product_DCNM," +
+                "Product_DAYCNT FROM API " +
+                "WHERE substr(Bar_CD,0,10) = ?";
         SQLiteDatabase db=dbHelper2.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlSelect,new String[]{RBarCode});
-
-        Log.v("바코드", String.valueOf(cursor.getCount()));
-
-       cursor.moveToFirst();
+        //Log.v("바코드", String.valueOf(cursor.getCount()));
+        cursor.moveToFirst();
         try {
             if (cursor != null) {
                 Log.v("바코드:", "커서");
                 String pname=cursor.getString(1);
                 String ptype=cursor.getString(2);
                 String pdate=cursor.getString(3);
-                Log.v("바코드:", "pname"+pname+"ptype"+ptype+"pdate"+pdate);
+                Log.v("바코드:", "pname"+pname+"ptype"+
+                        ptype+"pdate"+pdate);
                 nameView.setText(pname);
-                //typeView.setText(ptype);
                 dateView.setText(pdate);
             } else {
                 Log.v("바코드:", "값없음");
-                Toast.makeText(mission.this, "일치하는항목이 없습니다.직접입력해주세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mission.this,
+                        "일치하는항목이 없습니다.직접입력해주세요.",
+                        Toast.LENGTH_SHORT).show();
             }
         }
         finally {

@@ -36,16 +36,12 @@ public class BarCdparse {
         for (int i = 1; i < 5000; i += 1000) {
 
             URL url = new URL(getURLParam(null));
-            /*String urlR =  url.toString();
-            urlR = urlR + i + "/" + (i + 999) + "/";*/
 
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             XmlPullParser xpp = factory.newPullParser();
             BufferedInputStream bis = new BufferedInputStream(url.openStream());
             xpp.setInput(bis, "utf-8");
-
-            println("apiParserSearch "+i+"번째");
 
             String tag = null;
             int event_type = xpp.getEventType();
@@ -55,12 +51,8 @@ public class BarCdparse {
                 if (event_type == XmlPullParser.START_TAG) {
                     tag = xpp.getName();
                 } else if (event_type == XmlPullParser.TEXT) {
-                    /**
-                     *주소만 가져와본다.
-                     */
                     if (tag.equals("BAR_CD")) {
                         barCD = xpp.getText();
-                        println("DB바코드:"+ barCD);
                     } else if (tag.equals("PRDLST_NM")) {
                         productNM = xpp.getText();
                     } else if (tag.equals("PRDLST_DCNM")) {
@@ -70,8 +62,8 @@ public class BarCdparse {
                     }
                 } else if (event_type == XmlPullParser.END_TAG) {
                     tag = xpp.getName();
-
-                    if (tag.equals("BAR_CD") | tag.equals("PRDLST_NM") | tag.equals("PRDLST_DCNM") | tag.equals("POG_DAYCNT")) {
+                    if (tag.equals("BAR_CD") | tag.equals("PRDLST_NM") |
+                            tag.equals("PRDLST_DCNM") | tag.equals("POG_DAYCNT")) {
                         BarCdVo entity = new BarCdVo();
                         entity.setBar_CD(barCD);
                         entity.setProduct_NM(productNM);

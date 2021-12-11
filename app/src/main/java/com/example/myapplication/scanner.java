@@ -21,6 +21,7 @@ import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 
 import java.util.List;
 
+
 public class scanner extends AppCompatActivity {
     private CaptureManager capture;
     private DecoratedBarcodeView barcodeScannerView;
@@ -81,7 +82,7 @@ public class scanner extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), barcode, Toast.LENGTH_SHORT).show();
         Intent returnIntent = new Intent();
         returnIntent.putExtra("barcode",barcode);
-        setResult(RESULT_OK,returnIntent);
+        setResult(RESULT_OK,returnIntent); //바코드 값 가져오기
         finish();
     }
 }
